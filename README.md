@@ -1,6 +1,19 @@
-# <p align="center">📈 <span style="color:#E50914">Netflix India</span> <span style="color:#FFA500">Financial Modeling</span> | <span style="color:#217346">Excel</span> & <span style="color:#4A90E2">DCF Valuation</span></p>
+<div align="center">
 
-[FINANCIAL-MODEL](https://img.shields.io/badge/Financial--Model-DCF-E50914?style=for-the-badge&logo=netflix&logoColor=white) [EXCEL](https://img.shields.io/badge/Excel-3Statement-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white) [VALUATION](https://img.shields.io/badge/Valuation-Equity-4A90E2?style=for-the-badge) [INDIA](https://img.shields.io/badge/Market-India-FF9933?style=for-the-badge)
+<h1>
+<span style="color:#E50914;">Netflix India</span>
+
+<span style="color:#FF8C00;">Financial Modeling</span>
+<span style="color:#22C55E;">| Excel</span>
+<span style="color:#3B82F6;">& DCF Valuation</span>
+</h1>
+
+<p align="center">
+<img src="https://img.shields.io/badge/Financial--Model-DCF-E50914?style=for-the-badge&logo=netflix&logoColor=white" />
+<img src="https://img.shields.io/badge/Excel-3Statement-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" />
+<img src="https://img.shields.io/badge/Valuation-Equity-4A90E2?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Market-India-FF9933?style=for-the-badge" />
+</p>
 
 > A comprehensive 3-statement financial model and DCF valuation of **Netflix Entertainment Services India LLP**, analyzing the growth trajectory, content strategy, and long-term fair value in one of the world's fastest-growing OTT markets.
 
