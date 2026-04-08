@@ -1,25 +1,22 @@
-<div align="center">
+<div>
 
 <h1>
-<span style="color:#E50914;">Netflix India</span>
+<span style="color:#E50914;">Netflix Financial Model</span>
 
-<span style="color:#FF8C00;">Financial Modeling</span>
 <span style="color:#22C55E;">| Excel</span>
-<span style="color:#3B82F6;">& DCF Valuation</span>
+<span style="color:#F97316;">& DCF Valuation</span>
 </h1>
 
-<p align="center">
+<p>
 <img src="https://img.shields.io/badge/Financial--Model-DCF-E50914?style=for-the-badge&logo=netflix&logoColor=white" />
 <img src="https://img.shields.io/badge/Excel-3Statement-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" />
-<img src="https://img.shields.io/badge/Valuation-Equity-4A90E2?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Market-India-FF9933?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Valuation-DCF-4A90E2?style=for-the-badge" />
 </p>
 
 > A comprehensive 3-statement financial model and DCF valuation of **Netflix Entertainment Services India LLP**, analyzing the growth trajectory, content strategy, and long-term fair value in one of the world's fastest-growing OTT markets.
 
 📌 <span style="color:#E50914">Table of Contents</span>
 --------------------
-
 * • [Executive Summary](#-executive-summary)
 * • [Investment Thesis](#-investment-thesis)
 * • [Project Structure](#-project-structure)
@@ -43,7 +40,7 @@ Netflix India has emerged as a premium leader in the Indian streaming landscape,
 * • **Subscribers:** 21 Million
 * • **Implied Equity Value (DCF):** ~₹17,517 Cr
 
-💡 <span style="color:#FFA500">Investment Thesis</span>
+💡 <span style="color:#E50914">Investment Thesis</span>
 --------------------
 
 1. **Premium Segment Leadership:** Netflix commands 19% market share, maintaining the highest ARPU in India despite mass-market expansion.
@@ -51,29 +48,32 @@ Netflix India has emerged as a premium leader in the Indian streaming landscape,
 3. **Strategic Pricing Pivot:** Successful penetration of Tier-II/III cities via the ₹149 mobile-only plan and the launch of the ad-supported tier.
 4. **Massive TAM:** With India's internet penetration still growing, the platform is positioned to capture the top 100M households.
 
-🗂️ <span style="color:#217346">Project Structure</span>
+🗂️ <span style="color:#E50914">Project Structure</span>
 --------------------
 
-`netflix-india-financial-model-dcf-valuation/
+```
+netflix-india-financial-model-dcf-valuation/
 │
-├── 📁 assets/          ← Dashboard screenshots & visualization exports
-├── 📁 model/           ← Comprehensive 3-Statement Excel Model (.xlsx)
-├── 📁 data/            ← Historical financial summaries (FY21-FY25)
-├── 📁 reports/         ← Full PDF Research Report & Presentation
+├── 📁 assets/   ← Dashboard screenshots & visualization exports
+├── 📁 model/    ← Comprehensive 3-Statement Excel Model (.xlsx)
+├── 📁 data/     ← Historical financial summaries (FY21-FY25)
+├── 📁 reports/  ← Full PDF Research Report & Presentation
 └── README.md
-`
+```
 
-📊 <span style="color:#217346">Financial Analysis (FY21-FY25E)</span>
+📊 <span style="color:#E50914">Financial Analysis (FY21-FY25E)</span>
 ----------------------------------
 
 ### Revenue Growth
+
 Netflix India witnessed a massive 93.4% surge in FY22 (post-pandemic) and has since stabilized at a healthy 24-32% growth rate, driven by telecom bundling partnerships (Jio, Airtel) and original content hits like *Heeramandi* and *Amar Singh Chamkila*.
 
 ### Profitability Trend
+
 * • **Gross Margin:** Improving consistently to 33.8% in FY25E.
 * • **FCF Inflection:** Reached positive Free Cash Flow in FY24 (₹1 Cr), projected to grow to ₹17 Cr in FY25E.
 
-🧮 <span style="color:#4A90E2">DCF Valuation Framework</span>
+🧮 <span style="color:#E50914">DCF Valuation Framework</span>
 --------------------------
 
 The model utilizes a 5-year projection period followed by a Terminal Value calculation:
@@ -86,7 +86,7 @@ The model utilizes a 5-year projection period followed by a Terminal Value calcu
 | **Terminal Growth** | 4.50% | India Long-term Nominal GDP Proxy |
 | **Enterprise Value**| ₹16,667 Cr | Base Case DCF |
 
-📈 <span style="color:#4A90E2">Key Operational KPIs</span>
+📈 <span style="color:#E50914">Key Operational KPIs</span>
 -----------------------
 
 * • **Subscribers:** 3.5M (FY21) → 21M (FY25E) → 44M (FY30P)
@@ -97,6 +97,7 @@ The model utilizes a 5-year projection period followed by a Terminal Value calcu
 ----------------------------------
 
 The model includes a two-way sensitivity matrix analyzing the impact of **WACC** and **Terminal Growth** on the Enterprise Value.
+
 * • **Bull Case:** ₹22,456 Cr (18% Revenue CAGR)
 * • **Bear Case:** ₹11,234 Cr (10% Revenue CAGR)
 
@@ -117,3 +118,5 @@ The model includes a two-way sensitivity matrix analyzing the impact of **WACC**
 [LinkedIn](https://www.linkedin.com/in/akarshkpandey) | [GitHub](https://github.com/AkarshKumarM05) | [Email](mailto:tulnama02@gmail.com)
 
 > ⭐ If this financial model was helpful for your research or learning, please give it a star!
+
+</div>
