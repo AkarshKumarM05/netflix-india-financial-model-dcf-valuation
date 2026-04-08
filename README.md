@@ -10,7 +10,6 @@
 <p>
 <img src="https://img.shields.io/badge/Financial--Model-DCF-E50914?style=for-the-badge&logo=netflix&logoColor=white" />
 <img src="https://img.shields.io/badge/Excel-3Statement-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" />
-<img src="https://img.shields.io/badge/Valuation-DCF-4A90E2?style=for-the-badge" />
 </p>
 
 > A comprehensive 3-statement financial model and DCF valuation of **Netflix Entertainment Services India LLP**, analyzing the growth trajectory, content strategy, and long-term fair value in one of the world's fastest-growing OTT markets.
