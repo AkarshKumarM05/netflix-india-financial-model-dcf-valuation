@@ -1,7 +1,7 @@
 <div>
 
 <h1>
-<span style="color:#E50914;">Netflix Financial Model</span>
+<span style="color:#E50914;">Netflix India Financial Model</span>
 
 <span style="color:#22C55E;">| Excel</span>
 <span style="color:#F97316;">& DCF Valuation</span>
