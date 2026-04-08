@@ -1,10 +1,10 @@
-# 📈 Netflix India Financial Model & DCF Valuation
+# <p align="center">📈 <span style="color:#E50914">Netflix India</span> <span style="color:#FFA500">Financial Modeling</span> | <span style="color:#217346">Excel</span> & <span style="color:#4A90E2">DCF Valuation</span></p>
 
-[FINANCIAL-MODEL](https://img.shields.shields.shields.shields.io/badge/Financial--Model-DCF-E50914?style=for-the-badge&logo=netflix&logoColor=white) [EXCEL](https://img.shields.shields.shields.shields.io/badge/Excel-3Statement-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white) [VALUATION](https://img.shields.shields.shields.shields.io/badge/Valuation-Equity-4A90E2?style=for-the-badge) [INDIA](https://img.shields.shields.shields.shields.io/badge/Market-India-FF9933?style=for-the-badge)
+[FINANCIAL-MODEL](https://img.shields.io/badge/Financial--Model-DCF-E50914?style=for-the-badge&logo=netflix&logoColor=white) [EXCEL](https://img.shields.io/badge/Excel-3Statement-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white) [VALUATION](https://img.shields.io/badge/Valuation-Equity-4A90E2?style=for-the-badge) [INDIA](https://img.shields.io/badge/Market-India-FF9933?style=for-the-badge)
 
 > A comprehensive 3-statement financial model and DCF valuation of **Netflix Entertainment Services India LLP**, analyzing the growth trajectory, content strategy, and long-term fair value in one of the world's fastest-growing OTT markets.
 
-📌 Table of Contents
+📌 <span style="color:#E50914">Table of Contents</span>
 --------------------
 
 * • [Executive Summary](#-executive-summary)
@@ -18,7 +18,7 @@
 * • [How to Use the Model](#-how-to-use-the-model)
 * • [Author & Contact](#-author--contact)
 
-📖 Executive Summary
+📖 <span style="color:#E50914">Executive Summary</span>
 --------------------
 
 Netflix India has emerged as a premium leader in the Indian streaming landscape, achieving a **41.13% Revenue CAGR (FY21-FY25E)**. This project provides a deep-dive valuation based on official Ministry of Corporate Affairs (MCA) filings, capturing the inflection point from high content spending to positive free cash flow.
@@ -30,7 +30,7 @@ Netflix India has emerged as a premium leader in the Indian streaming landscape,
 * • **Subscribers:** 21 Million
 * • **Implied Equity Value (DCF):** ~₹17,517 Cr
 
-💡 Investment Thesis
+💡 <span style="color:#FFA500">Investment Thesis</span>
 --------------------
 
 1. **Premium Segment Leadership:** Netflix commands 19% market share, maintaining the highest ARPU in India despite mass-market expansion.
@@ -38,7 +38,7 @@ Netflix India has emerged as a premium leader in the Indian streaming landscape,
 3. **Strategic Pricing Pivot:** Successful penetration of Tier-II/III cities via the ₹149 mobile-only plan and the launch of the ad-supported tier.
 4. **Massive TAM:** With India's internet penetration still growing, the platform is positioned to capture the top 100M households.
 
-🗂️ Project Structure
+🗂️ <span style="color:#217346">Project Structure</span>
 --------------------
 
 `netflix-india-financial-model-dcf-valuation/
@@ -50,7 +50,7 @@ Netflix India has emerged as a premium leader in the Indian streaming landscape,
 └── README.md
 `
 
-📊 Financial Analysis (FY21-FY25E)
+📊 <span style="color:#217346">Financial Analysis (FY21-FY25E)</span>
 ----------------------------------
 
 ### Revenue Growth
@@ -60,7 +60,7 @@ Netflix India witnessed a massive 93.4% surge in FY22 (post-pandemic) and has si
 * • **Gross Margin:** Improving consistently to 33.8% in FY25E.
 * • **FCF Inflection:** Reached positive Free Cash Flow in FY24 (₹1 Cr), projected to grow to ₹17 Cr in FY25E.
 
-🧮 DCF Valuation Framework
+🧮 <span style="color:#4A90E2">DCF Valuation Framework</span>
 --------------------------
 
 The model utilizes a 5-year projection period followed by a Terminal Value calculation:
@@ -73,21 +73,21 @@ The model utilizes a 5-year projection period followed by a Terminal Value calcu
 | **Terminal Growth** | 4.50% | India Long-term Nominal GDP Proxy |
 | **Enterprise Value**| ₹16,667 Cr | Base Case DCF |
 
-📈 Key Operational KPIs
+📈 <span style="color:#4A90E2">Key Operational KPIs</span>
 -----------------------
 
 * • **Subscribers:** 3.5M (FY21) → 21M (FY25E) → 44M (FY30P)
 * • **Monthly ARPU:** ~₹1,496 (FY25E) stabilizing as the mix shifts toward mobile/ad tiers.
 * • **Content Efficiency:** Content costs as % of revenue declining from 58% to 52%.
 
-🧪 Scenario & Sensitivity Analysis
+🧪 <span style="color:#E50914">Scenario & Sensitivity Analysis</span>
 ----------------------------------
 
 The model includes a two-way sensitivity matrix analyzing the impact of **WACC** and **Terminal Growth** on the Enterprise Value.
 * • **Bull Case:** ₹22,456 Cr (18% Revenue CAGR)
 * • **Bear Case:** ₹11,234 Cr (10% Revenue CAGR)
 
-🚀 How to Use the Model
+🚀 <span style="color:#E50914">How to Use the Model</span>
 -----------------------
 
 1. **Clone the repo:** `git clone https://github.com/AkarshKumarM05/netflix-india-financial-model-dcf-valuation.git`
@@ -95,7 +95,7 @@ The model includes a two-way sensitivity matrix analyzing the impact of **WACC**
 3. **Run Scenarios:** Change the yellow-shaded cells in the `Assumptions` tab to see live valuation updates.
 4. **Review Report:** For a detailed breakdown, see the research report in `/reports/`.
 
-👨‍💻 Author & Contact
+👨‍💻 <span style="color:#E50914">Author & Contact</span>
 --------------------
 
 **Akarsh Kumar Pandey**
