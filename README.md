@@ -12,7 +12,7 @@
 <img src="https://img.shields.io/badge/Excel-3Statement-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" />
 </p>
 
-> A comprehensive 3-statement financial model and DCF valuation of **Netflix Entertainment Services India LLP**, analyzing the growth trajectory, content strategy, and long-term fair value in one of the world's fastest-growing OTT markets.
+> A comprehensive 3-statement financial model and DCF valuation of **Netflix Entertainment Services India LLP**, analyzing the growth trajectory, content strategy, and long-term fair value in one of the world's fastest-growing OTT markets from MCA filing sourced from Tofler.
 
 📌 <span style="color:#E50914">Table of Contents</span>
 --------------------
