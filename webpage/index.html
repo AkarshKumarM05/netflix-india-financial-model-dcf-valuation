@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix India: Financial Model & DCF Valuation 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; height: 350px; max-height: 400px; margin: 0 auto; }
+        .tab-active { border-bottom: 2px solid #E50914; color: #E50914; font-weight: 600; }
+        .kpi-card { transition: transform 0.2s; }
+        .kpi-card:hover { transform: translateY(-2px); }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 h-screen flex flex-col md:flex-row overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-full md:w-64 bg-white border-r border-gray-200 flex-shrink-0 flex flex-col z-20 shadow-sm">
+        <div class="p-6 border-b border-gray-100 flex items-center gap-3">
+            <div class="w-8 h-8 bg-[#E50914] rounded shadow-sm flex items-center justify-center text-white font-bold text-lg">N</div>
+            <div>
+                <h1 class="font-bold text-slate-900 leading-tight">Netflix India</h1>
+                <p class="text-xs text-slate-500">FY2025 Financial Model</p>
+            </div>
+        </div>
+        <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1">
+            <button onclick="switchSection('dashboard')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium hover:bg-red-50 hover:text-[#E50914] transition-colors flex items-center gap-2 bg-red-50 text-[#E50914]" id="btn-dashboard">
+                <span>📊</span> Executive Summary
+            </button>
+            <button onclick="switchSection('growth')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-red-50 hover:text-[#E50914] transition-colors flex items-center gap-2" id="btn-growth">
+                <span>🚀</span> Growth Story
+            </button>
+            <button onclick="switchSection('financials')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-red-50 hover:text-[#E50914] transition-colors flex items-center gap-2" id="btn-financials">
+                <span>💰</span> Financial Analysis
+            </button>
+            <button onclick="switchSection('valuation')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-red-50 hover:text-[#E50914] transition-colors flex items-center gap-2" id="btn-valuation">
+                <span>⚖️</span> Valuation Model
+            </button>
+            <button onclick="switchSection('outlook')" class="nav-btn w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium text-slate-600 hover:bg-red-50 hover:text-[#E50914] transition-colors flex items-center gap-2" id="btn-outlook">
+                <span>🔮</span> Future Outlook
+            </button>
+        </nav>
+        <div class="p-4 border-t border-gray-100 text-xs text-slate-400">
+            <p>Analyst: Akarsh Kumar Pandey</p>
+            <p class="mt-1">Data: MCA Filings via Tofler</p>
+            <div class="mt-2 bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-center font-bold">RATING: HOLD</div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto relative" id="main-scroll">
+
+        <!-- SECTION 1: EXECUTIVE SUMMARY -->
+        <section id="dashboard" class="page-section min-h-full p-6 md:p-10 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <span class="text-[#E50914] font-semibold tracking-wider text-xs uppercase">Investment Analysis · MCA Filings Source</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">Executive Summary</h2>
+                <p class="text-slate-600 mt-2 max-w-3xl">High-level snapshot of Netflix India's FY2025 performance and DCF valuation. Built from official Ministry of Corporate Affairs filings accessed via Tofler. Despite strong revenue acceleration and premium market leadership, we initiate a <strong>HOLD</strong> rating due to competitive consolidation risks.</p>
+            </div>
+
+            <!-- KPI Grid — all numbers from corrected Excel v2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="kpi-card bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-sm text-slate-500 font-medium">Enterprise Value (DCF)</p>
+                    <p class="text-2xl font-bold text-slate-900 mt-1">₹15,441 Cr</p>
+                    <div class="mt-2 text-xs text-slate-400">WACC: 14.66% | TGR: 4.50%</div>
+                </div>
+                <div class="kpi-card bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-sm text-slate-500 font-medium">FY25E Revenue</p>
+                    <p class="text-2xl font-bold text-green-600 mt-1">₹3,769 Cr</p>
+                    <div class="mt-2 text-xs text-green-600 flex items-center"><span class="mr-1">▲</span> 32.4% YoY Growth</div>
+                </div>
+                <div class="kpi-card bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <p class="text-sm text-slate-500 font-medium">FY25E EBITDA</p>
+                    <p class="text-2xl font-bold text-slate-900 mt-1">₹1,500 Cr</p>
+                    <div class="mt-2 text-xs text-slate-400">39.8% Margin (expanding)</div>
+                </div>
+                <div class="kpi-card bg-white p-5 rounded-xl border border-gray-200 shadow-sm border-l-4 border-l-yellow-400">
+                    <p class="text-sm text-slate-500 font-medium">Equity Value (DCF)</p>
+                    <p class="text-2xl font-bold text-yellow-600 mt-1">₹16,291 Cr</p>
+                    <div class="mt-2 text-xs text-slate-400">Net Income FY25E: ₹85 Cr</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-1 h-6 bg-green-500 rounded-full"></span> Investment Thesis
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-green-100 p-1 rounded">✅</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">Premium Segment Leadership</h4>
+                                <p class="text-sm text-slate-600">19% market share with highest ARPU (₹1,496/month FY25E). Strong brand loyalty in affluent India despite mass-market competition.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-green-100 p-1 rounded">✅</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">Operating Leverage</h4>
+                                <p class="text-sm text-slate-600">EBIT margins expanded from 1.6% (FY21) to 9.8% (FY25E) — 41.13% Revenue CAGR outpacing content amortization.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-green-100 p-1 rounded">✅</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">FCF Inflection Point</h4>
+                                <p class="text-sm text-slate-600">Reached positive Free Cash Flow in FY24. Declining parent capital contributions (₹450 Cr FY21 → ₹80 Cr FY25E) confirms self-sufficiency.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                        <span class="w-1 h-6 bg-red-500 rounded-full"></span> Key Risks
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-red-100 p-1 rounded">⚠️</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">Competitive Consolidation</h4>
+                                <p class="text-sm text-slate-600">JioCinema + Disney+ Hotstar merger controls cricket/sports rights (23% share). Amazon Prime Video aggressive bundling.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-red-100 p-1 rounded">⚠️</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">Content Cost Inflation</h4>
+                                <p class="text-sm text-slate-600">Content spending at 52.5% of revenue (₹1,980 Cr FY25E). Rising original Indian content production costs.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <div class="mt-1 bg-red-100 p-1 rounded">⚠️</div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 text-sm">Regulatory & Currency</h4>
+                                <p class="text-sm text-slate-600">Potential digital services tax changes, content censorship risks, and INR depreciation impacting parent company reporting.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: GROWTH STORY -->
+        <section id="growth" class="page-section hidden min-h-full p-6 md:p-10 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <span class="text-[#E50914] font-semibold tracking-wider text-xs uppercase">Historical Analysis · FY2021–FY2025E</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">The Growth Story</h2>
+                <p class="text-slate-600 mt-2 max-w-3xl">Netflix India achieved a 41.13% Revenue CAGR (FY21–FY25E) and 56.5% Subscriber CAGR. The FY24 subscriber explosion (+142.9% YoY to 17M) reflects successful bundling partnerships with Jio and Airtel, compressing ARPU from ₹2,781 to ₹1,395 while dramatically expanding the subscriber base.</p>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm mb-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-bold text-slate-800">Revenue (₹ Cr) vs. Subscribers (Millions) — FY21 to FY25E</h3>
+                    <div class="text-sm text-slate-500 bg-gray-100 px-3 py-1 rounded-full">MCA Verified Data</div>
+                </div>
+                <div class="chart-container"><canvas id="growthChart"></canvas></div>
+                <div class="mt-6 grid grid-cols-3 gap-4 text-center border-t border-gray-100 pt-4">
+                    <div><p class="text-xs text-slate-400 uppercase">FY21 ARPU/month</p><p class="font-bold text-slate-700">₹2,257</p></div>
+                    <div><p class="text-xs text-slate-400 uppercase">Revenue CAGR</p><p class="font-bold text-[#E50914] text-sm">41.13%</p></div>
+                    <div><p class="text-xs text-slate-400 uppercase">FY25E ARPU/month</p><p class="font-bold text-slate-700">₹1,496</p></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                    <h3 class="font-bold text-slate-800 mb-4">OTT Market Share — India (Q3 2025)</h3>
+                    <div class="chart-container" style="height: 250px;"><canvas id="marketShareChart"></canvas></div>
+                    <p class="text-sm text-center text-slate-500 mt-4">Netflix holds 19% share — premium positioning vs. Jio Hotstar (23%) and Prime Video (23%).</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-[#E50914]">
+                        <h4 class="font-bold text-slate-900 text-sm">FY24 Subscriber Explosion</h4>
+                        <p class="text-sm text-slate-600 mt-1">Subscribers jumped from 7M to 17M (+142.9% YoY) driven by telecom bundling (Jio, Airtel, Vodafone) and the ₹149 mobile-only plan launch.</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-slate-400">
+                        <h4 class="font-bold text-slate-900 text-sm">Ad-Tier Revenue Stream</h4>
+                        <p class="text-sm text-slate-600 mt-1">Ad-supported tier launched generating ₹225 Cr in FY25E (6% of revenue), growing 40%+ annually. Projected ₹2,000+ Cr by FY2030.</p>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-green-500">
+                        <h4 class="font-bold text-slate-900 text-sm">Content Efficiency Improving</h4>
+                        <p class="text-sm text-slate-600 mt-1">Content costs declining as % of revenue: 57.9% (FY21) → 52.5% (FY25E). 28 original Indian titles launched in 2025.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: FINANCIAL ANALYSIS -->
+        <section id="financials" class="page-section hidden min-h-full p-6 md:p-10 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <span class="text-[#E50914] font-semibold tracking-wider text-xs uppercase">3-Statement Model · Formula Driven</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">Financial Statements</h2>
+                <p class="text-slate-600 mt-2 max-w-3xl">All historical figures (FY21–FY24) sourced from MCA filings via Tofler. FY25E projected using formula-driven assumptions. Note the significant operating leverage — EBIT growing 122.86% CAGR vs Revenue at 41.13% CAGR.</p>
+            </div>
+            <div class="flex gap-4 border-b border-gray-200 mb-6">
+                <button onclick="switchTable('income')" id="tab-income" class="table-tab tab-active pb-2 px-1 text-sm font-medium transition-colors">Income Statement</button>
+                <button onclick="switchTable('balance')" id="tab-balance" class="table-tab text-slate-500 pb-2 px-1 text-sm font-medium hover:text-slate-800 transition-colors">Balance Sheet</button>
+                <button onclick="switchTable('cashflow')" id="tab-cashflow" class="table-tab text-slate-500 pb-2 px-1 text-sm font-medium hover:text-slate-800 transition-colors">Cash Flow</button>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm overflow-x-auto mb-10">
+                <table class="w-full text-sm text-left" id="financial-table"></table>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                <h3 class="font-bold text-slate-800 mb-2">Profitability Trend — Margin Expansion Story</h3>
+                <p class="text-xs text-slate-500 mb-6">Gross Margin % vs EBITDA Margin % vs EBIT Margin % (FY21–FY25E)</p>
+                <div class="chart-container"><canvas id="marginChart"></canvas></div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: VALUATION MODEL -->
+        <section id="valuation" class="page-section hidden min-h-full p-6 md:p-10 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <span class="text-[#E50914] font-semibold tracking-wider text-xs uppercase">DCF · WACC · Comparable Companies</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">Valuation Model</h2>
+                <p class="text-slate-600 mt-2 max-w-3xl">5-year DCF projection (FY2026–FY2030) with Gordon Growth terminal value. WACC derived from CAPM using India 10Y G-Sec (6.61%) as risk-free rate and Incwert India ERP Study 2025 (7.00%) as market risk premium. Netflix India is 100% equity-financed (zero debt).</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+                <!-- WACC Box -->
+                <div class="bg-slate-800 text-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-sm font-bold opacity-70 uppercase tracking-wide mb-4">WACC Parameters (CAPM)</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between border-b border-slate-700 pb-2">
+                            <span class="text-slate-300">Risk-Free Rate (Rf)</span>
+                            <span class="font-mono text-green-400">6.61%</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-700 pb-2">
+                            <span class="text-slate-300">Beta (β)</span>
+                            <span class="font-mono text-green-400">1.15</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-700 pb-2">
+                            <span class="text-slate-300">Market Risk Premium</span>
+                            <span class="font-mono text-green-400">7.00%</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-700 pb-2">
+                            <span class="text-slate-300">Terminal Growth Rate</span>
+                            <span class="font-mono text-green-400">4.50%</span>
+                        </div>
+                        <div class="flex justify-between pt-2">
+                            <span class="font-bold text-white">WACC (= Ke)</span>
+                            <span class="font-mono font-bold text-[#E50914] text-xl">14.66%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Valuation Bridge -->
+                <div class="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                    <h3 class="font-bold text-slate-800 mb-4">Valuation Bridge — DCF vs Comparable Companies (₹ Cr)</h3>
+                    <div class="chart-container" style="height: 250px;"><canvas id="valuationChart"></canvas></div>
+                </div>
+            </div>
+            <!-- Sensitivity Matrix — numbers from Excel Sensitivity Analysis sheet -->
+            <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                <h3 class="font-bold text-slate-800 mb-4">Two-Way Sensitivity: Enterprise Value (₹ Cr) vs WACC × Terminal Growth</h3>
+                <p class="text-xs text-slate-500 mb-4">Base case highlighted in red (WACC 14.66%, TGR 4.50% → EV ₹15,441 Cr)</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-center text-sm border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="p-3 bg-gray-50 border border-gray-200">WACC ↓ / TGR →</th>
+                                <th class="p-3 bg-gray-50 border border-gray-200">3.5%</th>
+                                <th class="p-3 bg-gray-50 border border-gray-200">4.0%</th>
+                                <th class="p-3 bg-gray-50 border border-gray-200 font-bold text-blue-600">4.5% (Base)</th>
+                                <th class="p-3 bg-gray-50 border border-gray-200">5.0%</th>
+                                <th class="p-3 bg-gray-50 border border-gray-200">5.5%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">12.0%</td>
+                                <td class="p-3 border border-gray-200 bg-green-100">19,234</td>
+                                <td class="p-3 border border-gray-200 bg-green-100">20,156</td>
+                                <td class="p-3 border border-gray-200 bg-green-200 font-medium">21,234</td>
+                                <td class="p-3 border border-gray-200 bg-green-200">22,489</td>
+                                <td class="p-3 border border-gray-200 bg-green-300 font-bold">23,956</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">13.0%</td>
+                                <td class="p-3 border border-gray-200 bg-green-50">17,456</td>
+                                <td class="p-3 border border-gray-200 bg-green-50">18,234</td>
+                                <td class="p-3 border border-gray-200 bg-green-100 font-medium">19,123</td>
+                                <td class="p-3 border border-gray-200 bg-green-100">20,145</td>
+                                <td class="p-3 border border-gray-200 bg-green-200">21,323</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold text-blue-600">14.66% (Base)</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-50">14,928</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-50">15,441</td>
+                                <td class="p-3 border border-gray-200 bg-[#E50914] text-white font-bold ring-2 ring-offset-2 ring-[#E50914]">15,441</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-100">17,234</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-100">18,456</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">15.0%</td>
+                                <td class="p-3 border border-gray-200 bg-red-50">14,123</td>
+                                <td class="p-3 border border-gray-200 bg-red-50">14,689</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-50 font-medium">15,334</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-50">16,078</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-100">16,945</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">16.0%</td>
+                                <td class="p-3 border border-gray-200 bg-red-100">13,045</td>
+                                <td class="p-3 border border-gray-200 bg-red-100">13,534</td>
+                                <td class="p-3 border border-gray-200 bg-red-50 font-medium">14,089</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-50">14,723</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-50">15,445</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-200 font-bold">17.0%</td>
+                                <td class="p-3 border border-gray-200 bg-red-200">12,056</td>
+                                <td class="p-3 border border-gray-200 bg-red-100">12,489</td>
+                                <td class="p-3 border border-gray-200 bg-red-100 font-medium">12,985</td>
+                                <td class="p-3 border border-gray-200 bg-red-50">13,543</td>
+                                <td class="p-3 border border-gray-200 bg-yellow-50">14,167</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FUTURE OUTLOOK -->
+        <section id="outlook" class="page-section hidden min-h-full p-6 md:p-10 max-w-6xl mx-auto">
+            <div class="mb-8">
+                <span class="text-[#E50914] font-semibold tracking-wider text-xs uppercase">Projections · FY2026–FY2030</span>
+                <h2 class="text-3xl font-bold text-slate-900 mt-1">Future Outlook</h2>
+                <p class="text-slate-600 mt-2 max-w-3xl">5-year scenario analysis. Base case projects revenue growing from ₹4,297 Cr (FY26P) to ₹6,916 Cr (FY30P) at ~14% CAGR. Subscriber base projected to reach 44M by FY2030.</p>
+            </div>
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button onclick="updateScenario('bear')" class="scenario-btn px-4 py-2 rounded-lg border border-gray-300 bg-white text-slate-600 hover:bg-gray-50 transition-all font-medium text-sm flex items-center gap-2">
+                    🐻 Bear Case (10% CAGR)
+                </button>
+                <button onclick="updateScenario('base')" class="scenario-btn px-4 py-2 rounded-lg border-2 border-[#E50914] bg-red-50 text-[#E50914] font-bold shadow-sm text-sm flex items-center gap-2">
+                    ⚖️ Base Case (14% CAGR)
+                </button>
+                <button onclick="updateScenario('bull')" class="scenario-btn px-4 py-2 rounded-lg border border-gray-300 bg-white text-slate-600 hover:bg-gray-50 transition-all font-medium text-sm flex items-center gap-2">
+                    🐂 Bull Case (18% CAGR)
+                </button>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+                    <h3 class="font-bold text-slate-800 mb-4" id="scenario-title">Base Case: Unlevered FCF Projections (₹ Cr)</h3>
+                    <div class="chart-container"><canvas id="scenarioChart"></canvas></div>
+                </div>
+                <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-sm flex flex-col justify-center">
+                    <h3 class="text-lg font-bold text-slate-900 mb-6">Implied Valuation Outcome</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-slate-500">Revenue CAGR (FY26–30)</span>
+                                <span class="font-bold text-slate-900" id="val-cagr">14%</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2">
+                                <div class="bg-[#E50914] h-2 rounded-full transition-all duration-500" style="width: 50%" id="bar-cagr"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-slate-500">Terminal Growth Rate</span>
+                                <span class="font-bold text-slate-900" id="val-term">4.5%</span>
+                            </div>
+                            <div class="w-full bg-gray-100 rounded-full h-2">
+                                <div class="bg-slate-400 h-2 rounded-full transition-all duration-500" style="width: 50%" id="bar-term"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-slate-500">WACC</span>
+                                <span class="font-bold text-slate-900" id="val-wacc">14.66%</span>
+                            </div>
+                        </div>
+                        <div class="pt-6 border-t border-gray-100">
+                            <p class="text-sm text-slate-500 mb-1">Enterprise Value (DCF)</p>
+                            <p class="text-4xl font-bold text-[#E50914] transition-all duration-300" id="val-ev">₹15,441 Cr</p>
+                            <p class="text-sm text-slate-500 mt-2">Equity Value: <span class="font-bold text-slate-800" id="val-equity">₹16,291 Cr</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="p-6 text-center text-xs text-slate-400 pb-20 md:pb-6">
+            <p>Built by Akarsh Kumar Pandey · B.Com (Hons), National PG College, University of Lucknow · Data: MCA Filings via Tofler · For Educational Purposes Only</p>
+        </footer>
+    </main>
+
+    <script>
+        // ── VERIFIED DATA FROM CORRECTED EXCEL MODEL v2 ──
+        const financials = {
+            income: [
+                { label: 'Revenue (₹ Cr)', vals: ['950', '1,837', '2,286', '2,846', '3,769'], highlight: true },
+                { label: 'YoY Growth %', vals: ['—', '93.4%', '24.4%', '24.5%', '32.4%'], highlight: false },
+                { label: 'Gross Profit', vals: ['305', '608', '791', '1,047', '1,451'], highlight: false },
+                { label: 'Gross Margin %', vals: ['32.1%', '33.1%', '34.6%', '36.8%', '38.5%'], highlight: false },
+                { label: 'EBITDA (₹ Cr)', vals: ['473', '516', '681', '911', '1,500'], highlight: true },
+                { label: 'EBITDA Margin %', vals: ['49.8%', '28.1%', '29.8%', '32.0%', '39.8%'], highlight: false },
+                { label: 'EBIT (₹ Cr)', vals: ['15', '51', '87', '199', '369'], highlight: false },
+                { label: 'EBIT Margin %', vals: ['1.6%', '2.8%', '3.8%', '7.0%', '9.8%'], highlight: false },
+                { label: 'Net Income (₹ Cr)', vals: ['10', '18', '32', '49', '82'], highlight: true },
+                { label: 'Net Margin %', vals: ['1.1%', '1.0%', '1.4%', '1.7%', '2.2%'], highlight: false }
+            ],
+            balance: [
+                { label: 'Cash & Equivalents', vals: ['362', '571', '676', '800', '800'], highlight: true },
+                { label: 'Total Current Assets', vals: ['483', '758', '951', '976', '1,027'], highlight: false },
+                { label: 'Content Library (Net)', vals: ['535', '285', '200', '850', '850'], highlight: false },
+                { label: 'Total Assets', vals: ['1,398', '1,488', '1,661', '2,397', '2,517'], highlight: true },
+                { label: 'Total Current Liabilities', vals: ['370', '540', '690', '1,553', '1,873'], highlight: false },
+                { label: 'Long-Term Debt', vals: ['0', '0', '0', '0', '0'], highlight: false },
+                { label: 'Total Equity', vals: ['808', '633', '514', '(6)', '94'], highlight: true }
+            ],
+            cashflow: [
+                { label: 'Net Income (₹ Cr)', vals: ['10', '18', '32', '49', '82'], highlight: false },
+                { label: 'Net Operating CF', vals: ['530', '840', '1,062', '1,284', '1,522'], highlight: true },
+                { label: 'Content CapEx', vals: ['(500)', '(800)', '(1,000)', '(1,200)', '(1,400)'], highlight: false },
+                { label: 'Net Investing CF', vals: ['(560)', '(872)', '(1,084)', '(1,296)', '(1,520)'], highlight: false },
+                { label: 'Free Cash Flow', vals: ['(20)', '(32)', '(22)', '(12)', '2'], highlight: true },
+                { label: 'Parent Capital Contrib.', vals: ['450', '280', '180', '120', '80'], highlight: false },
+                { label: 'Share Buybacks', vals: ['(30)', '(55)', '(68)', '(82)', '(110)'], highlight: false }
+            ]
+        };
+
+        // ── SCENARIO DATA — from Excel Scenario Analysis sheet ──
+        const scenarios = {
+            bear:  { cagr: '10%', term: '3.5%', wacc: '16.0%', ev: '₹11,234 Cr', equity: '₹12,084 Cr', fcf: [900, 1050, 1180, 1300, 1430], widthC: '25%', widthT: '20%' },
+            base:  { cagr: '14%', term: '4.5%', wacc: '14.66%', ev: '₹15,441 Cr', equity: '₹16,291 Cr', fcf: [1110, 1326, 1563, 1795, 2000], widthC: '50%', widthT: '50%' },
+            bull:  { cagr: '18%', term: '5.5%', wacc: '12.0%', ev: '₹22,456 Cr', equity: '₹23,306 Cr', fcf: [1350, 1700, 2100, 2550, 3050], widthC: '85%', widthT: '85%' }
+        };
+
+        // ── NAVIGATION ──
+        function switchSection(id) {
+            document.querySelectorAll('.page-section').forEach(el => el.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+            document.getElementById('main-scroll').scrollTop = 0;
+            document.querySelectorAll('.nav-btn').forEach(el => {
+                el.classList.remove('bg-red-50', 'text-[#E50914]');
+                el.classList.add('text-slate-600');
+            });
+            const btn = document.getElementById('btn-' + id);
+            btn.classList.remove('text-slate-600');
+            btn.classList.add('bg-red-50', 'text-[#E50914]');
+        }
+
+        // ── TABLE ──
+        function switchTable(type) {
+            document.querySelectorAll('.table-tab').forEach(el => {
+                el.classList.remove('tab-active', 'text-slate-800');
+                el.classList.add('text-slate-500');
+            });
+            document.getElementById('tab-' + type).classList.add('tab-active');
+            document.getElementById('tab-' + type).classList.remove('text-slate-500');
+
+            const table = document.getElementById('financial-table');
+            const data = financials[type];
+            let html = `<thead class="bg-gray-50 text-xs uppercase text-slate-500">
+                <tr>
+                    <th class="px-6 py-3 text-left">Metric</th>
+                    <th class="px-6 py-3">FY21</th><th class="px-6 py-3">FY22</th>
+                    <th class="px-6 py-3">FY23</th><th class="px-6 py-3">FY24</th>
+                    <th class="px-6 py-3">FY25E</th>
+                </tr></thead><tbody>`;
+            data.forEach((row, i) => {
+                const bg = i % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+                const fw = row.highlight ? 'font-bold text-slate-900' : 'text-slate-600';
+                html += `<tr class="${bg} border-b border-gray-100 hover:bg-red-50 transition-colors">
+                    <td class="px-6 py-4 ${fw}">${row.label}</td>
+                    ${row.vals.map(v => `<td class="px-6 py-4 font-mono text-center ${fw}">${v}</td>`).join('')}
+                </tr>`;
+            });
+            html += '</tbody>';
+            table.innerHTML = html;
+        }
+
+        // ── SCENARIO ──
+        function updateScenario(type) {
+            const d = scenarios[type];
+            const titles = { bear: 'Bear Case', base: 'Base Case', bull: 'Bull Case' };
+            document.getElementById('scenario-title').innerText = `${titles[type]}: Unlevered FCF Projections (₹ Cr)`;
+            document.getElementById('val-cagr').innerText = d.cagr;
+            document.getElementById('val-term').innerText = d.term;
+            document.getElementById('val-wacc').innerText = d.wacc;
+            document.getElementById('val-ev').innerText = d.ev;
+            document.getElementById('val-equity').innerText = d.equity;
+            document.getElementById('bar-cagr').style.width = d.widthC;
+            document.getElementById('bar-term').style.width = d.widthT;
+            window.scenarioChartInstance.data.datasets[0].data = d.fcf;
+            window.scenarioChartInstance.update();
+        }
+
+        // ── CHARTS ──
+        document.addEventListener('DOMContentLoaded', () => {
+            switchTable('income');
+
+            // 1. Growth Chart — MCA verified revenue + subscriber data
+            new Chart(document.getElementById('growthChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['FY21', 'FY22', 'FY23', 'FY24', 'FY25E'],
+                    datasets: [
+                        {
+                            label: 'Revenue (₹ Cr)',
+                            data: [950, 1837, 2286, 2846, 3769],
+                            backgroundColor: 'rgba(229, 9, 20, 0.75)',
+                            borderRadius: 4, order: 2, yAxisID: 'y'
+                        },
+                        {
+                            label: 'Subscribers (M)',
+                            data: [3.5, 5.5, 7.0, 17.0, 21.0],
+                            borderColor: '#1e293b', backgroundColor: '#1e293b',
+                            type: 'line', borderWidth: 2.5, tension: 0.3,
+                            pointRadius: 5, order: 1, yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { position: 'top' } },
+                    scales: {
+                        y: { type: 'linear', position: 'left', grid: { display: false }, title: { display: true, text: 'Revenue (₹ Cr)' } },
+                        y1: { type: 'linear', position: 'right', grid: { display: false }, title: { display: true, text: 'Subscribers (M)' } }
+                    }
+                }
+            });
+
+            // 2. Market Share — from model comparable companies sheet
+            new Chart(document.getElementById('marketShareChart').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Netflix (19%)', 'Jio Hotstar (23%)', 'Prime Video (23%)', 'Apple TV+ (15%)', 'Others (20%)'],
+                    datasets: [{
+                        data: [19, 23, 23, 15, 20],
+                        backgroundColor: ['#E50914', '#4c1d95', '#0ea5e9', '#6b7280', '#cbd5e1'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false, cutout: '60%',
+                    plugins: { legend: { position: 'right', labels: { font: { size: 11 } } } }
+                }
+            });
+
+            // 3. Margin Chart — from Income Statement sheet
+            new Chart(document.getElementById('marginChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['FY21', 'FY22', 'FY23', 'FY24', 'FY25E'],
+                    datasets: [
+                        {
+                            label: 'Gross Margin %',
+                            data: [32.1, 33.1, 34.6, 36.8, 38.5],
+                            borderColor: '#64748b', borderDash: [5, 5], tension: 0.4, pointRadius: 4
+                        },
+                        {
+                            label: 'EBITDA Margin %',
+                            data: [49.8, 28.1, 29.8, 32.0, 39.8],
+                            borderColor: '#E50914', backgroundColor: 'rgba(229,9,20,0.08)',
+                            fill: true, tension: 0.4, pointRadius: 4
+                        },
+                        {
+                            label: 'EBIT Margin %',
+                            data: [1.6, 2.8, 3.8, 7.0, 9.8],
+                            borderColor: '#16a34a', tension: 0.4, pointRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, title: { display: true, text: 'Margin %' } } }
+                }
+            });
+
+            // 4. Valuation Bridge — DCF EV + comparable midpoint + equity value
+            new Chart(document.getElementById('valuationChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['DCF Enterprise Value', 'Comparable Midpoint', 'Equity Value (DCF)'],
+                    datasets: [{
+                        label: 'Valuation (₹ Cr)',
+                        data: [15441, 13500, 16291],
+                        backgroundColor: ['#cbd5e1', '#cbd5e1', '#E50914'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: false, min: 10000 } }
+                }
+            });
+
+            // 5. Scenario Chart — Base case FCF from DCF sheet
+            window.scenarioChartInstance = new Chart(document.getElementById('scenarioChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['FY2026P', 'FY2027P', 'FY2028P', 'FY2029P', 'FY2030P'],
+                    datasets: [{
+                        label: 'Unlevered FCF (₹ Cr)',
+                        data: [1110, 1326, 1563, 1795, 2000],
+                        backgroundColor: '#E50914', borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, title: { display: true, text: '₹ Crores' } } }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
