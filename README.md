@@ -108,7 +108,6 @@ The model includes a two-way sensitivity matrix analyzing the impact of **WACC**
 3. **Run Scenarios:** Change the yellow-shaded cells in the `Assumptions` tab to see live valuation updates.
 4. **Review Report:** For a detailed breakdown, see the research report in `/reports/`.
 
-👨‍💻 <span style="color:#E50914">Author & Contact</span>
 --------------------
 
 ## 👨‍💻 Author & Contact
