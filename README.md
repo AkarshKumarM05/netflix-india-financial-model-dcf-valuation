@@ -61,7 +61,8 @@ netflix-india-financial-model-dcf-valuation/
 ├── 📁 assets/   ← Dashboard screenshots & visualization exports
 ├── 📁 model/    ← Comprehensive 3-Statement Excel Model (.xlsx)
 ├── 📁 data/     ← Historical financial summaries (FY21-FY25)
-├── 🌐 webpage/ ← [Live Web Dashboard](https://resplendent-youtiao-0f255d.netlify.app/)
+├── 🌐 webpage/ ← ## 🌐 Live Interactive Report [![View Live Report](https://img.shields.io/badge/Live%20Report-View%20Now-E50914?style=for-the-badge&logo=googlechrome&logoColor=white)](https://resplendent-youtiao-0f255d.netlify.app/)
+> 📊 Click above to explore the interactive financial dashboard — includes DCF valuation, sensitivity analysis, scenario toggles, and full 3-statement financials.
 ├─ 📁 reports/  ← Full PDF Research Report & Presentation
 └── README.md
 ```
