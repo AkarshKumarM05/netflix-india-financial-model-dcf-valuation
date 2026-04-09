@@ -61,7 +61,8 @@ netflix-india-financial-model-dcf-valuation/
 ├── 📁 assets/   ← Dashboard screenshots & visualization exports
 ├── 📁 model/    ← Comprehensive 3-Statement Excel Model (.xlsx)
 ├── 📁 data/     ← Historical financial summaries (FY21-FY25)
-├── 📁 reports/  ← Full PDF Research Report & Presentation
+├── 🌐 webpage/ ← [Live Web Dashboard](https://resplendent-youtiao-0f255d.netlify.app/)
+├─ 📁 reports/  ← Full PDF Research Report & Presentation
 └── README.md
 ```
 
