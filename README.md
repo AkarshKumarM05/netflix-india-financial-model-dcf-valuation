@@ -116,9 +116,10 @@ The model includes a two-way sensitivity matrix analyzing the impact of **WACC**
 --------------------
 ## 📊 Dashboard View
 
-![Dashboard Preview](https://raw.githubusercontent.com/AkarshKumarM05/netflix-india-financial-model-dcf-valuation/main/assets/Screenshot%202026-04-10%20031858.png)
+![Dashboard Preview](https://raw.githubusercontent.com/AkarshKumarM05/netflix-india-financial-model-dcf-valuation/main/assets/Screenshot%202026-04-10%20031858.png{{)
 
 ---
+[Webpage Preview](https://github.com/AkarshKumarM05/netflix-india-financial-model-dcf-valuation/blob/main/assets/Screenshot%202026-04-10%20053601.png{{)
 ## [🚀 View the Live Webpage Here](https://resplendent-youtiao-0f255d.netlify.app/)
 
 ----
