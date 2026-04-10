@@ -88,7 +88,8 @@ The model utilizes a 5-year projection period followed by a Terminal Value calcu
 | **Beta** | 1.15 | Unlevered Technology/Media Beta |
 | **WACC** | 14.66% | 100% Equity Financed (Zero Debt) |
 | **Terminal Growth** | 4.50% | India Long-term Nominal GDP Proxy |
-| **Enterprise Value**| ₹15,441 Cr | .
+| **Enterprise Value** | ₹15,441 Cr | Base Case DCF (5-Year Projection) |
+| **Equity Value** | ₹16,291 Cr | EV + Cash (₹850 Cr) − Debt (₹0) |
 
 📈 <span style="color:#E50914">Key Operational KPIs</span>
 -----------------------
