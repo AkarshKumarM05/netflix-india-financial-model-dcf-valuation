@@ -42,7 +42,7 @@ Netflix India has emerged as a premium leader in the Indian streaming landscape,
 * • **EBITDA Margin:** 39.8%
 * • **Net Income:** ₹85 Cr
 * • **Subscribers:** 21 Million
-* • **Implied Equity Value (DCF):** ~₹17,517 Cr
+* • **Implied Equity Value (DCF):** ~₹16,291 Cr
 
 💡 <span style="color:#E50914">Investment Thesis</span>
 --------------------
